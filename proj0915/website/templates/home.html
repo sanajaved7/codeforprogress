@@ -1,0 +1,26 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+	
+	<a href="/page3">Page 3</a>
+	<a href="/page2">Page 2</a>
+	<a href="/about">About</a>
+
+	<p>This is home page</p>
+
+	<p> Hello, {{ person }} </p>
+
+	<!-- <p> All people in db: {{ peoplelist }} </p> -->
+
+	{% for person in peoplelist %}
+		<li> {{ person.first_name}} {{ person.last_name }} </li>
+	{% endfor %}
+
+	<br>
+
+
+<p>Here is an image</p>
+<img src={% static 'img/computercopy.jpg' %} width="50%">
+
+</html>
